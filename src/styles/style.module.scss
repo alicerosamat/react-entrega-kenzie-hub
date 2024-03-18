@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('./reset.scss');
+
+:root {
+    font-family: 'Inter', sans-serif;
+    --primary-color: #FF577F;
+    --primary-color-focus: #FF427F;
+    --primary-color-negative: #59323F;
+
+    
+    --grey-scale-400: #121214;
+    --grey-scale-300: #212529;
+    --grey-scale-200: #343B41;
+    --grey-scale-100: #868E96;
+    --grey-scale-0: #F8F9FA;
+
+    --succes-color: #3FE864;
+    --negative-color: #E83F5B;
+    background-color: black ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.loginBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;    
+    width: 369px;   
+    left: 535px;   
+    border-radius: 4px;
+    color: var(--grey-scale-100);
+      
+}
+
+.formBox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--grey-scale-300);
+    padding-top: 2rem;
+    gap: 1rem;
+    width: 100%;
+}
+
+.formItem {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: var(--grey-scale-0);
+    padding: 0.75rem;
+    font-size: small;
+    height: 5rem;
+    width: 100%;
+    
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: larger;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+h2 {
+    color: var(--grey-scale-0);
+    font-size: medium;
+    font-weight: 500;
+    align-items: center;
+    padding: 1rem;
+}
+
+h3 {
+    color: var(--grey-scale-100);
+    font-size: small;
+    font-weight: 300;
+    align-items: center;
+    padding: 1rem;
+}
+
+p {
+    color: var(--grey-scale-100);
+    font-size: small;
+    font-weight: 200;
+    align-items: center;
+    padding: 1rem;
+}
+
+label {
+    padding: 1rem;
+}
+
+.btnLogin {
+    width: 18rem;
+    height: 3rem;
+    background-color: var(--primary-color);
+    color: var(--grey-scale-0);
+    border-radius: 0.4rem;
+}
+
+.btnRegister {
+    width: 18rem;
+    height: 3rem;
+    background-color: var(--grey-scale-100);
+    color: var(--grey-scale-0);
+    border-radius: 0.4rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+
+}
+
+input, option, select {
+    height: 2.5rem;
+    width: 17.2rem;
+    border-radius: 0.4rem;
+    background-color: var(--grey-scale-200);
+    color: var(--grey-scale-0);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+}
