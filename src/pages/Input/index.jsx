@@ -1,5 +1,5 @@
-import { forwardRef } from "react";
-import style from "../../styles/style.module.scss"
+import { forwardRef } from 'react'
+import style from '../../styles/style.module.scss'
 
 export const Input = forwardRef (({label, error, ...rest}, ref) => {
     return (
@@ -7,8 +7,8 @@ export const Input = forwardRef (({label, error, ...rest}, ref) => {
             <label >
                 {label}
                 <p>
-                <input ref={ref} {...rest} />
-                {error ? <p>{error.message}</p>: null}
+                    <input ref={ref} {...rest} />
+                    {error ? <p>{error.message}</p>: null}
                 </p>
             </label>
         </div>
