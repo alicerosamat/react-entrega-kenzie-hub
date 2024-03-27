@@ -4,16 +4,23 @@ import { loginSchema } from '../Schemas/loginSchema'
 import style from '../styles/style.module.scss'
 import { Input } from './Input'
 import { Link } from 'react-router-dom'
+import { api } from '../services/api'
 
 export const LoginPage = () => {
     const { register, handleSubmit, formState: {errors} } = useForm({
         resolver: zodResolver(loginSchema),
     })
     
-    const logIn = (formData)=> {
-        console.log (formData)        
+    const logIn = async (formData)=> {
+        try {
+            const {data} = await api.post('/sessions', formData);
+               console.log(data);
+         } catch (error) {
+            console.log(error);
+            
     }
 
+}
     
 
     return (

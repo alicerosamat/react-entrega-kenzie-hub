@@ -16,13 +16,11 @@ export const RegisterPage = () => {
             const {data} = await api.post('/users', formData)
             console.log(data)
         }catch(error){
+            console.log(error)
         }
     }
     
-    const submit = (formData)=> {
-        userRegister(formData)
-        console.log (formData)
-    }
+    
     return (
         <>
             <div>
@@ -35,7 +33,7 @@ export const RegisterPage = () => {
                 <div className={style.formBox}>
                     <h2>Crie sua conta</h2>
                     <h3>Rápido e grátis, vamos nessa</h3>
-                    <form onSubmit={handleSubmit(submit)}>
+                    <form onSubmit={handleSubmit(userRegister)}>
                         <Input label='Nome' type='text' placeholder='Nome' {...register('name')} error={errors.name} />
                         <Input label='Email' type='email' placeholder='E-mail' {...register('email')} error={errors.email}/>
                         <Input label='Senha' type='password' placeholder='Senha' {...register('password')} error={errors.password}/>
@@ -53,7 +51,7 @@ export const RegisterPage = () => {
                                 </select>
                             </p>
                         </div>
-                        <button className={style.btnLogin} type='submit' onClick={()=>submit}>Cadastre-se</button>
+                        <button className={style.btnLogin} type='submit'>Cadastre-se</button>
                     </form>                    
                 </div>
             </div>
